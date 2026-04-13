@@ -10,7 +10,7 @@ const CaseStudiesWidget = () => {
         Detailed case studies highlighting my execution in Sales, Product Management, and Engineering.
       </p>
       
-      <a href="#" className="placeholder-link" style={{ fontSize: '1.1rem', padding: '1.25rem 2.5rem' }}>
+      <a href="https://www.pitchlikethis.com/project/539b43a8-5032-4a08-879f-46fc7e54fac9" target="_blank" rel="noopener noreferrer" className="placeholder-link" style={{ fontSize: '1.1rem', padding: '1.25rem 2.5rem' }}>
         View Portfolio & Case Studies <ExternalLink size={20} />
       </a>
     </div>
