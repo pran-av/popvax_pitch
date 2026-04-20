@@ -107,8 +107,16 @@
 
 /* Roadmap Table Section */
 .roadmap-section {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
+
+.sub-header {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 
 .section-header {
   font-size: 2.2rem;
@@ -152,36 +160,53 @@
   background: rgba(255, 255, 255, 0.5);
 }
 
-.task-cell {
-  font-weight: 600;
+.front-cell {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent-magenta);
+  width: 12%;
+}
+
+.pointer-cell {
   color: var(--color-primary);
+  font-weight: 500;
+  width: 20%;
+}
+
+.initiative-cell {
   width: 25%;
 }
 
-.skill-cell {
+.initiative-cell strong {
+  color: var(--color-accent-cyan);
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 1.05rem;
+}
+
+.initiative-cell .desc {
+  display: block;
+  font-size: 0.9rem;
   color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.metric-cell {
+  color: var(--color-primary);
+  font-weight: 600;
   font-size: 0.95rem;
-  width: 20%;
+  width: 18%;
 }
 
 .case-cell {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   width: 25%;
   font-style: italic;
+  line-height: 1.5;
 }
 
-.product-cell {
-  color: var(--color-text-main);
-  font-size: 0.95rem;
-  width: 30%;
-}
-
-.product-cell strong {
-  color: var(--color-accent-cyan);
-  display: block;
-  margin-bottom: 0.25rem;
-}
 
 /* Case Studies Widget / Common Card */
 .card-content {
