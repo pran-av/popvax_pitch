@@ -117,7 +117,6 @@
   text-transform: uppercase;
 }
 
-
 .section-header {
   font-size: 2.2rem;
   color: var(--color-primary);
@@ -127,13 +126,11 @@
   overflow-x: auto;
   border-radius: 16px;
   padding: 0;
-  /* background handled by glass-card */
 }
 
 .roadmap-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 900px;
   text-align: left;
 }
 
@@ -150,14 +147,6 @@
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 1.1rem;
-}
-
-.roadmap-table tr:last-child td {
-  border-bottom: none;
-}
-
-.roadmap-table tr:hover td {
-  background: rgba(255, 255, 255, 0.5);
 }
 
 .front-cell {
@@ -205,6 +194,57 @@
   width: 25%;
   font-style: italic;
   line-height: 1.5;
+}
+
+/* Mobile Table Styles */
+@media (max-width: 992px) {
+  .roadmap-table, .roadmap-table thead, .roadmap-table tbody, .roadmap-table th, .roadmap-table td, .roadmap-table tr {
+    display: block;
+  }
+
+  .roadmap-table thead {
+    display: none; /* Hide headers on mobile */
+  }
+
+  .roadmap-table tr {
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+  }
+
+  .roadmap-table td {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 45% !important;
+    text-align: left;
+    width: auto !important;
+    min-height: 2.5rem;
+  }
+
+  .roadmap-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1.5rem;
+    width: 40%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: 700;
+    color: var(--color-accent-cyan);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .details-row td {
+    padding-left: 1.5rem !important;
+  }
+
+  .details-row td::before {
+    display: none;
+  }
 }
 
 .clickable-row {
@@ -272,6 +312,13 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@media (max-width: 992px) {
+  .details-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 .details-section h4 {
   color: var(--color-accent-magenta);
   font-size: 1rem;
@@ -322,6 +369,13 @@
   margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+  .section-toggle-btn {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
 .section-toggle-btn:hover {
   background: rgba(6, 182, 212, 0.1);
   border-color: var(--color-accent-cyan);
@@ -343,8 +397,16 @@
 .main-roadmap {
   margin-top: 2rem;
 }
+
+/* Common Card & Buttons */
 .card-content {
   padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .card-content {
+    padding: 1.5rem;
+  }
 }
 
 .placeholder-link {
@@ -358,6 +420,14 @@
   font-weight: 500;
   color: var(--color-primary);
   transition: all 0.2s;
+}
+
+@media (max-width: 768px) {
+  .placeholder-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+  }
 }
 
 .placeholder-link:hover {

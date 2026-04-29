@@ -150,10 +150,10 @@ const Roadmap = () => {
                   onClick={() => toggleRow(data, index, globalIndex)}
                   className={`${expandedRow === globalIndex ? 'expanded-row' : ''} ${hasDetails ? 'clickable-row' : ''}`}
                 >
-                  <td className="front-cell">
+                  <td className="front-cell" data-label="Front">
                     <strong>{row.front}</strong>
                   </td>
-                  <td className="pointer-cell">
+                  <td className="pointer-cell" data-label="Pointer">
                     <div className="pointer-content">
                       {row.pointer}
                       {hasDetails && (
@@ -163,12 +163,12 @@ const Roadmap = () => {
                       )}
                     </div>
                   </td>
-                  <td className="initiative-cell">
+                  <td className="initiative-cell" data-label="Initiative">
                     <strong>{row.initiative}</strong>
                     <span className="desc">{row.initiativeDesc}</span>
                   </td>
-                  <td className="metric-cell">{row.metric}</td>
-                  <td className="case-cell">{row.caseStudies}</td>
+                  <td className="metric-cell" data-label="Metric">{row.metric}</td>
+                  <td className="case-cell" data-label="Case Study">{row.caseStudies}</td>
                 </tr>
                 {expandedRow === globalIndex && (
                   <tr className="details-row">
