@@ -53,16 +53,16 @@ const roadmapData = [
     metric: "% of drugs entering trials that succeed (trial success rate). # of candidates entering pre-clinical per month (throughput). Time from discovery → trial (cycle time).",
     caseStudies: "Led the Monetization roadmap at Infinity Learn and improved revenues by 6X in my tenure.",
     industryBehavior: [
-      "The cycle includes Sample Collection - Discovery - Pre Clinical Trials - Trials - Commericialization",
-      "Human trials will take its natural time to show impact.",
-      "Sample Collection + Discovery + Pre Clinical Trials is where we can save a lot of time"
+      "The cycle includes <strong>Sample Collection - Discovery - Pre Clinical Trials - Trials - Commercialization</strong>",
+      "<strong>Human trials</strong> will take its natural time to show impact.",
+      "<strong>Sample Collection + Discovery + Pre Clinical Trials</strong> is where we can save a lot of time"
     ],
     how: [
-      "Launch Patient Lab Connect Program where for the first time a patient can directly connect with a lab for a hyper-personalized research focused secondary approach for their treatment.",
-      "With more samples we get to discover more variety in solutions that can be made ready for Pre-Trials.",
-      "To enable more discovery we need to improve the lab setup to support running simultaneous discovery pipelines. No sequential work.",
-      "Build support systems for scientists so they can hand over operational work and focus max time on investigation.",
-      "For Pre-Clincial Trials we explore new methods like In Silico Trials where we attempt to replicate human body conditions and measure the drug reaction."
+      "Launch <strong>Patient Lab Connect Program</strong> where for the first time a patient can directly connect with a lab for a hyper-personalized research focused secondary approach for their treatment.",
+      "With <strong>more samples</strong> we get to discover more variety in solutions that can be made ready for Pre-Trials. This means a lot of drugs can be in <strong>trial pipeline simultaneously</strong>.",
+      "To enable more discovery we need to improve the <strong>lab setup</strong> to support running <strong>simultaneous discovery pipelines</strong>. No sequential work.",
+      "Build <strong>support systems for scientists</strong> so they can hand over operational work and focus max time on investigation. Consider each scientist in a month researching on <strong>2x or 3x more</strong> discovery pipelines.",
+      "For Pre-Clinical Trials we explore new methods like <strong>In Silico Trials</strong> where we attempt to replicate human body conditions and measure the drug reaction. This enables us to deliver drugs to trials with <strong>double the confidence</strong> of success."
     ]
   },
   {
@@ -73,17 +73,17 @@ const roadmapData = [
     metric: "% experiments fully ALCOA+ compliant, Data reuse rate across experiments, Time to hire for critical roles, investment conversions",
     caseStudies: "Developed auditable backend systems for payment collection and transaction management that could scale up to 400k monthly transactions with 99.99% uptime.",
     industryBehavior: [
-      "ALCOA+ principles for Good Laboratory Practices classification",
-      "Data Residency Requirements and GDPR for transfers",
-      "Either internal data sharing becomes a bottleneck and slows down research or becomes loose enough to risk data privacy",
-      "Difficuly finding talent"
+      "<strong>ALCOA+ principles</strong> for Good Laboratory Practices classification",
+      "<strong>Data Residency Requirements</strong> and <strong>GDPR</strong> for transfers",
+      "Either internal data sharing becomes a <strong>bottleneck</strong> and slows down research or becomes loose enough to risk <strong>data privacy</strong>",
+      "Difficuly <strong>finding talent</strong>"
     ],
     how: [
-      "Guardrails to avoid human errors: Machines should be linked to internal systems to record state, scientist info, and sample info digitally for every experiment.",
-      "AI driven audit logs so any mistakes are caught early instead of during regulatory audits risking the entire drug.",
-      "Implement Deny by Default data security architecture along with strict role based access control with multiparty approval system.",
-      "University programs to build interest in young scientists and include them in gaining research experience through internships. Convert internship to full time.",
-      "Improve public brand reviews and work benefits to attract more talent."
+      "<strong>Guardrails</strong> to avoid human errors: Machines should be linked to internal systems to record <strong>state, scientist info, and sample info digitally</strong> for every experiment.",
+      "<strong>AI driven audit logs</strong> so any mistakes are caught early instead of during regulatory audits risking the entire drug.",
+      "Implement <strong>Deny by Default</strong> data security architecture along with <strong>strict role based access control</strong> with multiparty approval system.",
+      "<strong>University programs</strong> to build interest in young scientists and include them in gaining research experience through <strong>internships</strong>. Convert internship to full time.",
+      "Improve <strong>public brand reviews</strong> and <strong>work benefits</strong> to attract more talent."
     ]
   },
   {
@@ -94,24 +94,16 @@ const roadmapData = [
     metric: "# of actionable insights per disease area, Time to recruit trial participants, % of trials supported with RWE datasets",
     caseStudies: "Experience with B2C product lifecycle. Started and scaled growth initiatives like referrals and renewals.",
     industryBehavior: [
-      "The drug adoption in the market depends on the market sentiment, like which side effects are less desired. Hence building a good Target Product Profile becomes crucial.",
-      "Difficulty to find right patients for clinical trials and high drop out rates in clinical trials",
-      "Trials require a lot of data for comparison and to prove Real World Effectiveness of the drug"
+      "The drug adoption in the market depends on the <strong>market sentiment</strong>, like which side effects are less desired. Hence building a good <strong>Target Product Profile</strong> becomes crucial.",
+      "Difficulty to <strong>find right patients</strong> for clinical trials and <strong>high drop out rates</strong> in clinical trials",
+      "Trials require a lot of data for comparison and to prove <strong>Real World Effectiveness</strong> of the drug"
     ],
     how: [
-      "Start building Patient Self Help Groups from the very beginning - this will help with access to patient perspectives regarding logistics, finances, physical and mental impacts.",
-      "Use the same Self Help Group pipeline to build a brand so that candidates for clinical trials can be identified faster through referrals and word of mouth",
-      "Host Doctor-Scientist conferences or podcasts as a brand building measure. Branding should also help with getting faster permissions for trials.",
-      "B2C initiative providing personalised healthcare support or improving quality of life like biomarker tracking. Access to control data for faster trial evidence."
+      "Start building <strong>Patient Self Help Groups</strong> from the very beginning - this will help with access to <strong>patient perspectives</strong> regarding logistics, finances, physical and mental impacts. Much better <strong>product profiling</strong> with this data.",
+      "Use the same Self Help Group pipeline to build a <strong>brand</strong> so that candidates for clinical trials can be identified faster through <strong>referrals and word of mouth</strong>",
+      "Host <strong>Doctor-Scientist conferences or podcasts</strong> as a brand building measure. Branding should also help with getting <strong>faster permissions for trials</strong> - removing regulatory overhead.",
+      "A <strong>B2C initiative</strong> that provides personalised healthcare support to individuals or improves quality of life like <strong>biomarker tracking</strong>. Could include subsidised screening of health individuals - this will help with access to <strong>control data</strong> that will help faster evidence in clinical trials."
     ]
-  },
-  {
-    front: "Cure & Technique",
-    pointer: "I will make learnings reusable across programs",
-    initiative: "Knowledge-to-Protocol Library",
-    initiativeDesc: "capturing insights, failures, and response patterns",
-    metric: "100% reuse in new program kickoffs",
-    caseStudies: "Built reusable product + GTM artifacts reducing build time by 3X"
   },
   {
     front: "Cross-cutting",
@@ -120,22 +112,6 @@ const roadmapData = [
     initiativeDesc: "tracking all programs, risks, and owners",
     metric: "100% tracking; all red items owned within 48 hrs",
     caseStudies: "Built dashboards, tracking systems, and execution workflows across teams"
-  },
-  {
-    front: "Cross-cutting",
-    pointer: "I will improve treatment affordability for patients",
-    initiative: "Patient Financing Platform",
-    initiativeDesc: "EMI-style plans and chronic-care financing options",
-    metric: "Launch 3–5 financing partners; improve treatment conversion by 15%+",
-    caseStudies: "Integrated EMI, BNPL, and flexible payments leading to 6X revenue growth"
-  },
-  {
-    front: "Go-to-Market / Brand",
-    pointer: "I will build institutional demand and credibility",
-    initiative: "Vaccine Brand & Institutional GTM Engine",
-    initiativeDesc: "research, patents, publications, and partnerships",
-    metric: "5-10 institutional leads, 3+ pilots, growing research visibility",
-    caseStudies: "Built outbound funnels (600 prospects), closed enterprise clients, and led GTM execution"
   }
 ];
 
@@ -203,7 +179,7 @@ const Roadmap = () => {
                             <h4>Industry Behavior</h4>
                             <ul>
                               {row.industryBehavior.map((item, i) => (
-                                <li key={i}>{item}</li>
+                                <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
                               ))}
                             </ul>
                           </div>
@@ -213,7 +189,7 @@ const Roadmap = () => {
                             <h4>How</h4>
                             <ul>
                               {row.how.map((item, i) => (
-                                <li key={i}>{item}</li>
+                                <li key={i} dangerouslySetInnerHTML={{ __html: item }} />
                               ))}
                             </ul>
                           </div>
