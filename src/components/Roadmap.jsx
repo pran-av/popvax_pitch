@@ -67,11 +67,24 @@ const roadmapData = [
   },
   {
     front: "Cure & Technique",
-    pointer: "I will enable research collaboration and data sharing",
-    initiative: "Research Collaboration Hub",
-    initiativeDesc: "shared datasets and insights registry",
-    metric: "Quarterly reviews with 100% study visibility",
-    caseStudies: "Led cross-team coordination and reporting across multiple stakeholders"
+    pointer: "I will build a secure, audit-ready research data infrastructure that enables seamless collaboration while ensuring regulatory compliance and data integrity.",
+    initiative: "Trusted Research Data Exchange",
+    initiativeDesc: "secure data infrastructure and audit-ready pipelines",
+    metric: "% experiments fully ALCOA+ compliant, Data reuse rate across experiments, Time to hire for critical roles, investment conversions",
+    caseStudies: "Developed auditable backend systems for payment collection and transaction management that could scale up to 400k monthly transactions with 99.99% uptime.",
+    industryBehavior: [
+      "ALCOA+ principles for Good Laboratory Practices classification",
+      "Data Residency Requirements and GDPR for transfers",
+      "Either internal data sharing becomes a bottleneck and slows down research or becomes loose enough to risk data privacy",
+      "Difficulty finding talent"
+    ],
+    how: [
+      "Guardrails to avoid human errors: Machines should be linked to internal systems to record state, scientist info, and sample info digitally for every experiment.",
+      "AI driven audit logs so any mistakes are caught early instead of during regulatory audits risking the entire drug.",
+      "Implement Deny by Default data security architecture along with strict role based access control with multiparty approval system.",
+      "University programs to build interest in young scientists and include them in gaining research experience through internships.",
+      "Improve public brand reviews and work benefits to attract more talent."
+    ]
   },
   {
     front: "Cure & Technique",

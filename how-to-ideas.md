@@ -25,3 +25,27 @@ How:
 5. For Pre-Clincial Trials we explore new methods like In Silico Trials where we attempt to replicate human body conditions and measure the drug reaction. This enables us to deliver drugs to trials with double the confidence of success.
 
 
+## I will enable research collaboration and data sharing
+
+New Objective Statement: I will build a secure, audit-ready research data infrastructure that enables seamless collaboration while ensuring regulatory compliance and data integrity.
+
+Productivised Initiative: Trusted Research Data Exchange
+
+Target Metrics: % experiments fully ALCOA+ compliant, Data reuse rate across experiments, Time to hire for critical roles, investment conversions
+
+Related Case Studies: Developed auditable backend systems for payment collection and transaction management that could scale up to 400k monthly transactions with 99.99% uptime.
+
+Industry behaviors:
+1. ALCOA+ principles for Good Laboratory Practices classification
+2. Data Residency Requirements and GDPR for transfers
+3. Either internal data sharing becomes a bottleneck and slows down research or becomes loose enough to risk data privacy
+4. Difficuly finding talent
+
+How:
+1. Guardrails to avoid human errors: like forgetting to record intial caliberations before starting an experiment. Machines should be linked to internal systems that can record their state at any point of time. Ability to revisit state, scientist info, sample info digitally for every experiment.
+2. AI driven audit logs so any mistakes are caught early instead of during regulatory audits risking the entire drug.
+3. Implement Deny by Default data security architecutre along with strict role based access control with multiparty approval system.
+4. University programs to build interest in young scientists and include them in gaining research experience through internships. Convert internship to full time.
+5. Improve public brand reviews and work benefits to attract more talent.
+
+
