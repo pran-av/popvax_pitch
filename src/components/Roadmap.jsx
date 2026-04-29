@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 
 const strategyPointers = [
@@ -47,11 +47,23 @@ const roadmapData = [
   },
   {
     front: "Cure & Technique",
-    pointer: "I will speed up trials and decisions",
-    initiative: "Trial Execution OS",
-    initiativeDesc: "milestone tracking, risk logs, and decision SLAs",
-    metric: "Reduce decision latency by 50%+",
-    caseStudies: "Built execution dashboards and coordinated cross-functional delivery across teams"
+    pointer: "I will build high-throughput discovery and decision systems to increase the probability of trial success.",
+    initiative: "Discovery-to-Trial Acceleration Platform",
+    initiativeDesc: "high-throughput candidate discovery and In Silico trials",
+    metric: "% of drugs entering trials that succeed (trial success rate). # of candidates entering pre-clinical per month (throughput). Time from discovery → trial (cycle time).",
+    caseStudies: "Led the Monetization roadmap at Infinity Learn and improved revenues by 6X in my tenure.",
+    industryBehavior: [
+      "The cycle includes Sample Collection - Discovery - Pre Clinical Trials - Trials - Commericialization",
+      "Human trials will take its natural time to show impact.",
+      "Sample Collection + Discovery + Pre Clinical Trials is where we can save a lot of time"
+    ],
+    how: [
+      "Launch Patient Lab Connect Program where for the first time a patient can directly connect with a lab for a hyper-personalized research focused secondary approach for their treatment.",
+      "With more samples we get to discover more variety in solutions that can be made ready for Pre-Trials.",
+      "To enable more discovery we need to improve the lab setup to support running simultaneous discovery pipelines. No sequential work.",
+      "Build support systems for scientists so they can hand over operational work and focus max time on investigation.",
+      "For Pre-Clincial Trials we explore new methods like In Silico Trials where we attempt to replicate human body conditions and measure the drug reaction."
+    ]
   },
   {
     front: "Cure & Technique",
@@ -104,6 +116,96 @@ const roadmapData = [
 ];
 
 const Roadmap = () => {
+  const [expandedRow, setExpandedRow] = useState(null);
+  const [isEarlyDetectionCollapsed, setIsEarlyDetectionCollapsed] = useState(true);
+
+  const toggleRow = (data, localIndex, globalId) => {
+    if (data[localIndex].industryBehavior || data[localIndex].how) {
+      setExpandedRow(expandedRow === globalId ? null : globalId);
+    }
+  };
+
+  const earlyDetectionData = roadmapData.filter(row => row.front === "Early Detection & Prevention");
+  const otherRoadmapData = roadmapData.filter(row => row.front !== "Early Detection & Prevention");
+
+  const renderTable = (data, sectionId) => (
+    <div className="table-container glass-card">
+      <table className="roadmap-table">
+        <thead>
+          <tr>
+            <th>Front</th>
+            <th>Pointer (What I will do)</th>
+            <th>Productised Initiative</th>
+            <th>Target Metric</th>
+            <th>Related Case Studies</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((row, index) => {
+            const globalIndex = `${sectionId}-${index}`;
+            const hasDetails = row.industryBehavior || row.how;
+            return (
+              <React.Fragment key={globalIndex}>
+                <tr 
+                  onClick={() => toggleRow(data, index, globalIndex)}
+                  className={`${expandedRow === globalIndex ? 'expanded-row' : ''} ${hasDetails ? 'clickable-row' : ''}`}
+                >
+                  <td className="front-cell">
+                    <strong>{row.front}</strong>
+                  </td>
+                  <td className="pointer-cell">
+                    <div className="pointer-content">
+                      {row.pointer}
+                      {hasDetails && (
+                        <button className="expand-button" onClick={(e) => { e.stopPropagation(); toggleRow(data, index, globalIndex); }}>
+                          {expandedRow === globalIndex ? 'Collapse' : 'Expand'}
+                        </button>
+                      )}
+                    </div>
+                  </td>
+                  <td className="initiative-cell">
+                    <strong>{row.initiative}</strong>
+                    <span className="desc">{row.initiativeDesc}</span>
+                  </td>
+                  <td className="metric-cell">{row.metric}</td>
+                  <td className="case-cell">{row.caseStudies}</td>
+                </tr>
+                {expandedRow === globalIndex && (
+                  <tr className="details-row">
+                    <td colSpan="5">
+                      <div className="details-content">
+                        {row.industryBehavior && (
+                          <div className="details-section">
+                            <h4>Industry Behavior</h4>
+                            <ul>
+                              {row.industryBehavior.map((item, i) => (
+                                <li key={i}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {row.how && (
+                          <div className="details-section">
+                            <h4>How</h4>
+                            <ul>
+                              {row.how.map((item, i) => (
+                                <li key={i}>{item}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
+
   return (
     <div className="roadmap-section">
       <h2 className="section-header" style={{ textAlign: "center", marginBottom: "3rem" }}>
@@ -126,37 +228,31 @@ const Roadmap = () => {
           ))}
         </div>
       </div>
-      
-      <div className="table-container glass-card">
-        <table className="roadmap-table">
-          <thead>
-            <tr>
-              <th>Front</th>
-              <th>Pointer (What I will do)</th>
-              <th>Productised Initiative</th>
-              <th>Target Metric</th>
-              <th>Related Case Studies</th>
-            </tr>
-          </thead>
-          <tbody>
-            {roadmapData.map((row, index) => (
-              <tr key={index}>
-                <td className="front-cell"><strong>{row.front}</strong></td>
-                <td className="pointer-cell">{row.pointer}</td>
-                <td className="initiative-cell">
-                  <strong>{row.initiative}</strong>
-                  <span className="desc">{row.initiativeDesc}</span>
-                </td>
-                <td className="metric-cell">{row.metric}</td>
-                <td className="case-cell">{row.caseStudies}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+
+      <div className="main-roadmap">
+        <h3 className="sub-header" style={{ marginBottom: "2rem", textAlign: "center" }}>
+          Implementation & Execution Roadmap
+        </h3>
+        
+        <div className="collapsible-section" style={{ marginBottom: "3rem" }}>
+          <button 
+            className="section-toggle-btn glass-card"
+            onClick={() => setIsEarlyDetectionCollapsed(!isEarlyDetectionCollapsed)}
+          >
+            <span>Early Detection & Prevention Front</span>
+            <span className="toggle-icon">{isEarlyDetectionCollapsed ? '↓' : '↑'}</span>
+          </button>
+          {!isEarlyDetectionCollapsed && renderTable(earlyDetectionData, 'early')}
+        </div>
+        
+        <div className="other-fronts">
+          {renderTable(otherRoadmapData, 'main')}
+        </div>
       </div>
     </div>
   );
 };
 
 export default Roadmap;
+
 
