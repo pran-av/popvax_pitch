@@ -76,23 +76,34 @@ const roadmapData = [
       "ALCOA+ principles for Good Laboratory Practices classification",
       "Data Residency Requirements and GDPR for transfers",
       "Either internal data sharing becomes a bottleneck and slows down research or becomes loose enough to risk data privacy",
-      "Difficulty finding talent"
+      "Difficuly finding talent"
     ],
     how: [
       "Guardrails to avoid human errors: Machines should be linked to internal systems to record state, scientist info, and sample info digitally for every experiment.",
       "AI driven audit logs so any mistakes are caught early instead of during regulatory audits risking the entire drug.",
       "Implement Deny by Default data security architecture along with strict role based access control with multiparty approval system.",
-      "University programs to build interest in young scientists and include them in gaining research experience through internships.",
+      "University programs to build interest in young scientists and include them in gaining research experience through internships. Convert internship to full time.",
       "Improve public brand reviews and work benefits to attract more talent."
     ]
   },
   {
     front: "Cure & Technique",
-    pointer: "I will build a patient intelligence and care system",
-    initiative: "Precision Disease Companion App",
-    initiativeDesc: "education, treatment guidance, trial discovery, and peer support",
-    metric: "50%+ active usage, 30%+ trial match CTR, 20%+ reduction in support queries",
-    caseStudies: "Built structured product systems and shipped 0→1 products; reduced build time by 3X"
+    pointer: "I will build a patient intelligence and engagement system that improves drug design, accelerates trial recruitment, and generates real-world evidence at scale.",
+    initiative: "Patient Intelligence & Engagement Platform",
+    initiativeDesc: "B2C engagement, trial recruitment, and RWE generation",
+    metric: "# of actionable insights per disease area, Time to recruit trial participants, % of trials supported with RWE datasets",
+    caseStudies: "Experience with B2C product lifecycle. Started and scaled growth initiatives like referrals and renewals.",
+    industryBehavior: [
+      "The drug adoption in the market depends on the market sentiment, like which side effects are less desired. Hence building a good Target Product Profile becomes crucial.",
+      "Difficulty to find right patients for clinical trials and high drop out rates in clinical trials",
+      "Trials require a lot of data for comparison and to prove Real World Effectiveness of the drug"
+    ],
+    how: [
+      "Start building Patient Self Help Groups from the very beginning - this will help with access to patient perspectives regarding logistics, finances, physical and mental impacts.",
+      "Use the same Self Help Group pipeline to build a brand so that candidates for clinical trials can be identified faster through referrals and word of mouth",
+      "Host Doctor-Scientist conferences or podcasts as a brand building measure. Branding should also help with getting faster permissions for trials.",
+      "B2C initiative providing personalised healthcare support or improving quality of life like biomarker tracking. Access to control data for faster trial evidence."
+    ]
   },
   {
     front: "Cure & Technique",

@@ -48,4 +48,23 @@ How:
 4. University programs to build interest in young scientists and include them in gaining research experience through internships. Convert internship to full time.
 5. Improve public brand reviews and work benefits to attract more talent.
 
+## I will build a patient intelligence and care system
 
+New Objective Statement: I will build a patient intelligence and engagement system that improves drug design, accelerates trial recruitment, and generates real-world evidence at scale.
+
+Productivised Initiative: Patient Intelligence & Engagement Platform
+
+Target Metrics: # of actionable insights per disease area, Time to recruit trial participants, % of trials supported with RWE datasets
+
+Related Case Studies: Experience with B2C product lifecycle. Started and scaled growth initiatives like referrals and renewals.
+
+Industry Behaviors:
+1. The drug adoption in the market depends on the market sentiment, like which side effects are less desired. Hence building a good Target Product Profile becomes crucial.
+2. Difficuly to find right patients for clinical trials and high drop out rates in clinical trials
+3. Trials require a lot of data for comparison and to prove Real World Effectiveness of the drug
+
+How:
+1. Start building Patient Self Help Groups from the very beginning - this will help with access to patient perspectives regarding logistics, finances, physical and mental impacts. Much better product profiling with this data.
+2. Use the same Self Help Group pipeline to build a brand so that candidates for clinical trials can be identified faster through referrals and word of mouth
+3. Host Doctor-Scientist conferneces or podcasts as a brand building measure. Branding should also help with getting faster permissions for trials - removing regulatory overhead.
+4. A B2C initiative that provides personalised healthcare support to individuals or improves quality of life like biomarker tracking. Could include subsidised screening of health individuals - this will help with access to control data that will help faster evidence in clincial trials.
