@@ -15,12 +15,20 @@ function App() {
     return () => window.removeEventListener('popstate', handleLocationChange);
   }, []);
 
+  useEffect(() => {
+    if (currentPath === '/popvax') {
+      document.title = 'Pranav | Chief of Staff @ PopVax';
+    } else {
+      document.title = 'Pranav | SPM @ Matterway';
+    }
+  }, [currentPath]);
+
   // Simple routing logic
   const renderPage = () => {
-    if (currentPath === '/matterway') {
-      return <MatterwayPage />;
+    if (currentPath === '/popvax') {
+      return <PopVaxPage />;
     }
-    return <PopVaxPage />;
+    return <MatterwayPage />;
   };
 
   return (
@@ -36,17 +44,17 @@ function App() {
       }}>
         <button 
           onClick={() => { window.history.pushState({}, '', '/'); setCurrentPath('/'); }}
-          className={`tag ${currentPath !== '/matterway' ? 'active' : ''}`}
-          style={{ cursor: 'pointer', border: currentPath !== '/matterway' ? '2px solid' : '1px solid opacity 0.5' }}
-        >
-          PopVax
-        </button>
-        <button 
-          onClick={() => { window.history.pushState({}, '', '/matterway'); setCurrentPath('/matterway'); }}
-          className={`tag ${currentPath === '/matterway' ? 'active' : ''}`}
-          style={{ cursor: 'pointer', border: currentPath === '/matterway' ? '2px solid' : '1px solid opacity 0.5' }}
+          className={`tag ${currentPath !== '/popvax' ? 'active' : ''}`}
+          style={{ cursor: 'pointer', border: currentPath !== '/popvax' ? '2px solid' : '1px solid opacity 0.5' }}
         >
           Matterway
+        </button>
+        <button 
+          onClick={() => { window.history.pushState({}, '', '/popvax'); setCurrentPath('/popvax'); }}
+          className={`tag ${currentPath === '/popvax' ? 'active' : ''}`}
+          style={{ cursor: 'pointer', border: currentPath === '/popvax' ? '2px solid' : '1px solid opacity 0.5' }}
+        >
+          PopVax
         </button>
       </nav>
 
