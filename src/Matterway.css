@@ -1,0 +1,117 @@
+:root {
+  /* Matterway Brand Colors - Refined */
+  --matterway-red: #E61E2A;
+  --matterway-red-glow: rgba(230, 30, 42, 0.15);
+  --matterway-black: #0F0F0F;
+  --matterway-white: #FFFFFF;
+  --matterway-gray: #F9FAFB;
+  --matterway-text: #111827;
+  --matterway-text-muted: #6B7280;
+  
+  --matterway-glass-border: rgba(0, 0, 0, 0.08);
+  --matterway-glass-shadow: 0 10px 40px rgba(230, 30, 42, 0.06);
+}
+
+.matterway-theme {
+  background-color: var(--matterway-white);
+  color: var(--matterway-text);
+  min-height: 100vh;
+  transition: all 0.5s ease;
+}
+
+.matterway-theme .text-gradient {
+  background: linear-gradient(135deg, var(--matterway-red), #991B1B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.matterway-theme .glass-card {
+  background: var(--matterway-white);
+  border: 1px solid var(--matterway-glass-border);
+  box-shadow: var(--matterway-glass-shadow);
+  border-radius: 20px;
+  backdrop-filter: none; /* Matterway is clean and sharp */
+}
+
+.matterway-theme .glass-card:hover {
+  border-color: var(--matterway-red);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(230, 30, 42, 0.1);
+}
+
+.matterway-theme .tag {
+  border-color: var(--matterway-red);
+  color: var(--matterway-red);
+  background: var(--matterway-red-glow);
+  transition: all 0.3s ease;
+}
+
+.matterway-theme .tag:hover {
+  background: var(--matterway-red);
+  color: white;
+}
+
+.matterway-theme .pointer-icon {
+  background: var(--matterway-red-glow);
+  color: var(--matterway-red);
+  border-radius: 14px;
+}
+
+.matterway-theme .section-header {
+  color: var(--matterway-black);
+  border-bottom: 3px solid var(--matterway-red);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+.matterway-theme h1 {
+  font-size: 4rem;
+  letter-spacing: -0.04em;
+}
+
+.matterway-theme .pointer-card h3 {
+  color: var(--matterway-black);
+  font-weight: 800;
+}
+
+/* Background accents for Matterway */
+.matterway-bg-accents {
+  position: relative;
+  overflow: hidden;
+}
+
+.matterway-bg-accents::before, .matterway-bg-accents::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+  opacity: 0.12;
+  pointer-events: none;
+  animation: pulse 10s infinite alternate ease-in-out;
+}
+
+.matterway-bg-accents::before {
+  width: 800px;
+  height: 800px;
+  background: var(--matterway-red);
+  top: -300px;
+  right: -200px;
+}
+
+.matterway-bg-accents::after {
+  width: 700px;
+  height: 700px;
+  background: #000;
+  bottom: -100px;
+  left: -200px;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); opacity: 0.08; }
+  to { transform: scale(1.1); opacity: 0.15; }
+}
