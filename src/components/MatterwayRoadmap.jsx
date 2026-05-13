@@ -57,7 +57,7 @@ const STRATEGIC_ROADMAP_ROWS = [
     goal:
       'A schema-driven stack where the Matterway platform is a thin client rendering logic authored on a central server.',
     initiatives:
-      'Protocol (server–client): a JSON-based DSL for sequential or branched steps; triggers for when the assistant appears (e.g., URL matches */sap/ui*); agent hooks to APIs where agents do heavy work (OCR, data mapping). Plug-and-play agents via a standardized interface—simple regex validators or LLM KYC screeners all return uniform outputs. No-code flow designer (internal, then external) with drag-and-drop steps so flows like purchase training and claims processing share the same infrastructure.',
+      'One shared playbook lives on the server; the Matterway UI simply follows it. Define steps (straight or branching), when the assistant should open (for example when an agent reaches a core system screen), and which tools do the grunt work—OCR, moving data between systems, and so on. Any “agent” plugs in behind one contract—whether it is lightweight rules or a heavy AI step. Teams drag and drop flows in a designer so onboarding, claims, finance, etc. reuse the same engine instead of bespoke builds.',
   },
   {
     track: 'Measurement: the Impact Command Center',
@@ -65,7 +65,7 @@ const STRATEGIC_ROADMAP_ROWS = [
     goal:
       'Prove 1–2 year payback with dashboards that emphasize dollar value, not just uptime.',
     initiatives:
-      'Telemetry: every protocol step emits started, completed, failed, or bypassed_by_human. Calculated ROI: (avg. manual time − assistant time) × executions. Error avoidance: count of red-flag validations that blocked bad data entry. Funnel analytics: spot drop-off inside flows (e.g., many exits at step 3 signal UX friction or a broken capability).',
+      'Every step in a flow logs start, finish, failure, or “agent skipped this and did it manually.” Tie that to dollars: time saved × how often it runs. Count how often we stop bad submissions before they become rework. Watch where people quit the assistant—steady drop-off at one step flags bad UX or a missing integration.',
   },
   {
     track: 'Monetization: the “Automation Marketplace”',
@@ -73,7 +73,7 @@ const STRATEGIC_ROADMAP_ROWS = [
     goal:
       'Turn Matterway into a self-service revenue channel inside the Cognizant ecosystem.',
     initiatives:
-      'Flow Store: catalog in the Assistant (e.g., “Invoice Exception Handler—try 14 days”). Tiered access—Standard (horizontal flows, basic data entry); Professional (vertical solutions like banking/automotive, customer-built simple flows); Enterprise (specialized high-risk agents owned by Matterway). One-click deployment: purchased flows assigned to groups via the protocol surface in the Assistant without a full product update.',
+      'In-product “store” where leaders browse ready-made workflows (trial periods, ratings, upgrades). Pricing tiers: essentials for horizontal work, richer packs for regulated industries plus light self-service build, elite tier for Matterway-built high-risk automations. After purchase, assign a flow to a team and it appears in their Assistant—no traditional release cycle required.',
   },
 ];
 
