@@ -1,20 +1,22 @@
-Matterway
+# Matterway PRD
 
-Key Concepts
-Unlike RPA its Human-in-the-loop
+## Context
+- Business Process Operations but with a productivised AI Stack 
+- Unlike vanilla RPA, the value prop is 'Human-in-the-loop'
 
-Workplace Productivity + Automation
+## Requirements
 
-Why would I be a good choice?
-Worked with internal teams & automated their processes – Finance, Sales, Product & Operations.
+1. Go through the current codebase, understand it and only make the following changes to the Matterway Page.
+2. Preserve and reuse the current design language of the Matterway Page
+3. Follow the attached wireframe to redevelop the page
+4. Correct any grammatical mistakes prexisting
 
-Managed the Monetization Roadmap as lead PM for 3 years. Experienced with B2B + B2C solutions.
+### Wireframe
 
-Developed my own product that helps job seekers automate their application process.
+Note: As per wireframe keep the Roadmap section empty, while build the rest.
 
-Any such things I did at IL?
-Smart Batching — receive preference based on availability.
+For depicting the visualization use libraries to make it as accurate with the wireframe. We need 2D, no 3D complication.
 
-Managing EMI Disbursals, Refunds Processing. Finance
+[V1-Wireframe](../popvax_pitch/Matterway.png)
 
-Collecting custom payments for Sales.
+
