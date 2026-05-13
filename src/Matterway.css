@@ -234,8 +234,12 @@ body.page-matterway nav .tag:hover {
   width: 100%;
 }
 
+.matterway-roadmap-card-head {
+  margin-bottom: 1.25rem;
+}
+
 .matterway-roadmap-card-title {
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.6rem;
   font-size: clamp(1.35rem, 3vw, 1.85rem);
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -243,6 +247,22 @@ body.page-matterway nav .tag:hover {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--matterway-red);
   display: inline-block;
+}
+
+.matterway-roadmap-impact {
+  margin: 0;
+  font-size: clamp(0.88rem, 1.85vw, 0.98rem);
+  color: var(--matterway-text);
+  line-height: 1.5;
+}
+
+.matterway-roadmap-impact-label {
+  font-weight: 700;
+  color: var(--matterway-black);
+}
+
+.matterway-roadmap-impact-sep {
+  color: var(--matterway-text-muted);
 }
 
 .matterway-roadmap-table-wrap {

@@ -77,6 +77,26 @@ const STRATEGIC_ROADMAP_ROWS = [
   },
 ];
 
+function RoadmapImpactSummary({ impactTimeline, delivery }) {
+  return (
+    <p className="matterway-roadmap-impact">
+      <span className="matterway-roadmap-impact-item">
+        <span className="matterway-roadmap-impact-label">Impact timeline:</span>
+        {' '}
+        {impactTimeline}
+      </span>
+      <span className="matterway-roadmap-impact-sep" aria-hidden>
+        {' · '}
+      </span>
+      <span className="matterway-roadmap-impact-item">
+        <span className="matterway-roadmap-impact-label">Delivery:</span>
+        {' '}
+        {delivery}
+      </span>
+    </p>
+  );
+}
+
 function RoadmapMomentumTable({ rows }) {
   return (
     <div className="matterway-roadmap-table-wrap matterway-roadmap-table-wrap--momentum">
@@ -141,12 +161,18 @@ const MatterwayRoadmap = () => (
 
     <div className="matterway-roadmap-stack">
       <div className="glass-card matterway-roadmap-card">
-        <h3 className="matterway-roadmap-card-title">Momentum Roadmap</h3>
+        <header className="matterway-roadmap-card-head">
+          <h3 className="matterway-roadmap-card-title">Momentum Roadmap</h3>
+          <RoadmapImpactSummary impactTimeline="Quarterly" delivery="2–3 months" />
+        </header>
         <RoadmapMomentumTable rows={ROADMAP_ROWS} />
       </div>
 
       <div className="glass-card matterway-roadmap-card">
-        <h3 className="matterway-roadmap-card-title">Strategic Roadmap</h3>
+        <header className="matterway-roadmap-card-head">
+          <h3 className="matterway-roadmap-card-title">Strategic Roadmap</h3>
+          <RoadmapImpactSummary impactTimeline="1–2 years" delivery="6–12 months" />
+        </header>
         <RoadmapStrategicTable rows={STRATEGIC_ROADMAP_ROWS} />
       </div>
     </div>
