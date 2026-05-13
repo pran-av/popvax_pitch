@@ -50,38 +50,104 @@ const ROADMAP_ROWS = [
   },
 ];
 
+const STRATEGIC_ROADMAP_ROWS = [
+  {
+    track: 'Infrastructure: the “Universal Flow” engine',
+    effort: '~70%',
+    goal:
+      'A schema-driven stack where the Matterway platform is a thin client rendering logic authored on a central server.',
+    initiatives:
+      'Protocol (server–client): a JSON-based DSL for sequential or branched steps; triggers for when the assistant appears (e.g., URL matches */sap/ui*); agent hooks to APIs where agents do heavy work (OCR, data mapping). Plug-and-play agents via a standardized interface—simple regex validators or LLM KYC screeners all return uniform outputs. No-code flow designer (internal, then external) with drag-and-drop steps so flows like purchase training and claims processing share the same infrastructure.',
+  },
+  {
+    track: 'Measurement: the Impact Command Center',
+    effort: '~10%',
+    goal:
+      'Prove 1–2 year payback with dashboards that emphasize dollar value, not just uptime.',
+    initiatives:
+      'Telemetry: every protocol step emits started, completed, failed, or bypassed_by_human. Calculated ROI: (avg. manual time − assistant time) × executions. Error avoidance: count of red-flag validations that blocked bad data entry. Funnel analytics: spot drop-off inside flows (e.g., many exits at step 3 signal UX friction or a broken capability).',
+  },
+  {
+    track: 'Monetization: the “Automation Marketplace”',
+    effort: '~20%',
+    goal:
+      'Turn Matterway into a self-service revenue channel inside the Cognizant ecosystem.',
+    initiatives:
+      'Flow Store: catalog in the Assistant (e.g., “Invoice Exception Handler—try 14 days”). Tiered access—Standard (horizontal flows, basic data entry); Professional (vertical solutions like banking/automotive, customer-built simple flows); Enterprise (specialized high-risk agents owned by Matterway). One-click deployment: purchased flows assigned to groups via the protocol surface in the Assistant without a full product update.',
+  },
+];
+
+function RoadmapMomentumTable({ rows }) {
+  return (
+    <div className="matterway-roadmap-table-wrap matterway-roadmap-table-wrap--momentum">
+      <table className="matterway-roadmap-table matterway-roadmap-table--momentum">
+        <thead>
+          <tr>
+            <th scope="col">Phase</th>
+            <th scope="col">Timeline</th>
+            <th scope="col">Action</th>
+            <th scope="col">Insights &amp; rationale</th>
+            <th scope="col">Artifact / outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={`${row.phase}-${row.timeline}`}>
+              <th scope="row">{row.phase}</th>
+              <td>{row.timeline}</td>
+              <td>{row.action}</td>
+              <td>{row.insights}</td>
+              <td>{row.outcome}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function RoadmapStrategicTable({ rows }) {
+  return (
+    <div className="matterway-roadmap-table-wrap matterway-roadmap-table-wrap--strategic">
+      <table className="matterway-roadmap-table matterway-roadmap-table--strategic">
+        <thead>
+          <tr>
+            <th scope="col">Track</th>
+            <th scope="col">Effort</th>
+            <th scope="col">Goal</th>
+            <th scope="col">Initiatives &amp; capabilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={`${row.track}-${row.effort}`}>
+              <th scope="row">{row.track}</th>
+              <td>{row.effort}</td>
+              <td>{row.goal}</td>
+              <td>{row.initiatives}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 const MatterwayRoadmap = () => (
   <section className="why-section matterway-section-spaced" aria-labelledby="matterway-roadmap-heading">
     <h2 id="matterway-roadmap-heading" className="section-header">
       My Roadmap
     </h2>
 
-    <div className="glass-card matterway-roadmap-card">
-      <h3 className="matterway-roadmap-card-title">Momentum Roadmap</h3>
+    <div className="matterway-roadmap-stack">
+      <div className="glass-card matterway-roadmap-card">
+        <h3 className="matterway-roadmap-card-title">Momentum Roadmap</h3>
+        <RoadmapMomentumTable rows={ROADMAP_ROWS} />
+      </div>
 
-      <div className="matterway-roadmap-table-wrap">
-        <table className="matterway-roadmap-table">
-          <thead>
-            <tr>
-              <th scope="col">Phase</th>
-              <th scope="col">Timeline</th>
-              <th scope="col">Action</th>
-              <th scope="col">Insights &amp; rationale</th>
-              <th scope="col">Artifact / outcome</th>
-            </tr>
-          </thead>
-          <tbody>
-            {ROADMAP_ROWS.map((row) => (
-              <tr key={`${row.phase}-${row.timeline}`}>
-                <th scope="row">{row.phase}</th>
-                <td>{row.timeline}</td>
-                <td>{row.action}</td>
-                <td>{row.insights}</td>
-                <td>{row.outcome}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="glass-card matterway-roadmap-card">
+        <h3 className="matterway-roadmap-card-title">Strategic Roadmap</h3>
+        <RoadmapStrategicTable rows={STRATEGIC_ROADMAP_ROWS} />
       </div>
     </div>
   </section>

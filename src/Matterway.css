@@ -227,6 +227,13 @@ body.page-matterway nav .tag:hover {
   max-width: 100%;
 }
 
+.matterway-roadmap-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
 .matterway-roadmap-card-title {
   margin: 0 0 1.25rem;
   font-size: clamp(1.35rem, 3vw, 1.85rem);
@@ -247,10 +254,22 @@ body.page-matterway nav .tag:hover {
 
 .matterway-roadmap-table {
   width: 100%;
-  min-width: 52rem;
   border-collapse: collapse;
   font-size: clamp(0.8rem, 1.65vw, 0.93rem);
   line-height: 1.45;
+}
+
+.matterway-roadmap-table--momentum {
+  min-width: 52rem;
+}
+
+.matterway-roadmap-table--strategic {
+  min-width: 54rem;
+}
+
+.matterway-roadmap-table--strategic tbody th[scope='row'] {
+  min-width: 10.5rem;
+  max-width: 14rem;
 }
 
 .matterway-roadmap-table thead th {
