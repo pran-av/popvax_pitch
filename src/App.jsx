@@ -23,34 +23,48 @@ function App() {
     }
   }, [currentPath]);
 
-  // Simple routing logic
-  const renderPage = () => {
+  useEffect(() => {
+    const body = document.body;
     if (currentPath === '/popvax') {
-      return <PopVaxPage />;
+      body.classList.remove('page-matterway');
+    } else {
+      body.classList.add('page-matterway');
     }
-    return <MatterwayPage />;
-  };
+    return () => {
+      body.classList.remove('page-matterway');
+    };
+  }, [currentPath]);
 
+  // PopVax uses constrained app-container; Matterway is full viewport (no cyan/magenta body bleed).
   return (
-    <div className="app-container">
-      {/* Navigation for easier testing/switching */}
-      <nav style={{ 
-        position: 'fixed', 
-        top: '1rem', 
-        right: '1rem', 
-        zIndex: 100,
-        display: 'flex',
-        gap: '0.5rem'
-      }}>
-        <button 
-          onClick={() => { window.history.pushState({}, '', '/'); setCurrentPath('/'); }}
+    <>
+      <nav
+        style={{
+          position: 'fixed',
+          top: '1rem',
+          right: '1rem',
+          zIndex: 100,
+          display: 'flex',
+          gap: '0.5rem',
+        }}
+      >
+        <button
+          type="button"
+          onClick={() => {
+            window.history.pushState({}, '', '/');
+            setCurrentPath('/');
+          }}
           className={`tag ${currentPath !== '/popvax' ? 'active' : ''}`}
           style={{ cursor: 'pointer', border: currentPath !== '/popvax' ? '2px solid' : '1px solid opacity 0.5' }}
         >
           Matterway
         </button>
-        <button 
-          onClick={() => { window.history.pushState({}, '', '/popvax'); setCurrentPath('/popvax'); }}
+        <button
+          type="button"
+          onClick={() => {
+            window.history.pushState({}, '', '/popvax');
+            setCurrentPath('/popvax');
+          }}
           className={`tag ${currentPath === '/popvax' ? 'active' : ''}`}
           style={{ cursor: 'pointer', border: currentPath === '/popvax' ? '2px solid' : '1px solid opacity 0.5' }}
         >
@@ -58,8 +72,14 @@ function App() {
         </button>
       </nav>
 
-      {renderPage()}
-    </div>
+      {currentPath === '/popvax' ? (
+        <div className="app-container">
+          <PopVaxPage />
+        </div>
+      ) : (
+        <MatterwayPage />
+      )}
+    </>
   );
 }
 
