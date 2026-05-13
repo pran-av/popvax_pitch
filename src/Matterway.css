@@ -115,3 +115,200 @@
   from { transform: scale(1); opacity: 0.08; }
   to { transform: scale(1.1); opacity: 0.15; }
 }
+
+.matterway-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1;
+}
+
+/* Content column matches legacy app-container width; outer page is full-bleed. */
+.matterway-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .matterway-inner {
+    padding: 1rem;
+    gap: 2rem;
+  }
+}
+
+.matterway-theme .header-goal h1 {
+  color: var(--matterway-text);
+}
+
+.matterway-theme .header-goal p {
+  color: var(--matterway-text-muted);
+}
+
+/* PopVax body orbs/colors bleed around the old max-width wrapper; isolate Matterway route on <body>. */
+body.page-matterway {
+  background-color: var(--matterway-white);
+  color: var(--matterway-text);
+}
+
+body.page-matterway::before,
+body.page-matterway::after {
+  display: none;
+}
+
+body.page-matterway a {
+  color: var(--matterway-red);
+}
+
+body.page-matterway a:hover {
+  color: #991b1b;
+}
+
+body.page-matterway nav .tag {
+  border-color: var(--matterway-red);
+  color: var(--matterway-red);
+  background: var(--matterway-red-glow);
+  box-shadow: 0 4px 14px rgba(230, 30, 42, 0.12);
+  backdrop-filter: none;
+}
+
+body.page-matterway nav .tag:hover {
+  background: var(--matterway-red);
+  color: #fff;
+  border-color: var(--matterway-red);
+}
+
+.matterway-section-spaced {
+  margin-top: 0;
+}
+
+.matterway-intro {
+  padding-bottom: 0;
+}
+
+.matterway-strategy-diagram {
+  padding: 1.75rem 1.5rem 1.5rem;
+  max-width: 100%;
+}
+
+.matterway-strategy-kicker {
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(1rem, 2.8vw, 1.35rem);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--matterway-black);
+  margin: 0 0 1rem;
+}
+
+.matterway-strategy-figure {
+  margin: 0;
+}
+
+.matterway-strategy-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.matterway-roadmap-card {
+  padding: 1.5rem 1.25rem 1.75rem;
+  max-width: 100%;
+}
+
+.matterway-roadmap-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.matterway-roadmap-card-title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--matterway-black);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--matterway-red);
+  display: inline-block;
+}
+
+.matterway-roadmap-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+}
+
+.matterway-roadmap-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(0.8rem, 1.65vw, 0.93rem);
+  line-height: 1.45;
+}
+
+.matterway-roadmap-table--momentum {
+  min-width: 52rem;
+}
+
+.matterway-roadmap-table--strategic {
+  min-width: 54rem;
+}
+
+.matterway-roadmap-table--strategic tbody th[scope='row'] {
+  min-width: 10.5rem;
+  max-width: 14rem;
+}
+
+.matterway-roadmap-table thead th {
+  text-align: left;
+  vertical-align: bottom;
+  padding: 0.65rem 0.85rem;
+  background: var(--matterway-gray);
+  color: var(--matterway-black);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.045em;
+  border-bottom: 2px solid var(--matterway-red);
+}
+
+.matterway-roadmap-table tbody th {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.85rem;
+  font-weight: 800;
+  color: var(--matterway-black);
+  border-bottom: 1px solid var(--matterway-glass-border);
+  min-width: 9.5rem;
+}
+
+.matterway-roadmap-table td {
+  vertical-align: top;
+  padding: 0.85rem;
+  color: var(--matterway-text);
+  border-bottom: 1px solid var(--matterway-glass-border);
+}
+
+.matterway-roadmap-table tbody tr:last-child th,
+.matterway-roadmap-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.matterway-roadmap-table tbody tr:hover td,
+.matterway-roadmap-table tbody tr:hover th[scope='row'] {
+  background: rgba(230, 30, 42, 0.04);
+}
+
